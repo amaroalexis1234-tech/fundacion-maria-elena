@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+:root {
+  /* Neutros */
+  --color-white: #ffffff;
+  --color-offwhite: #f8f9fb;
+  --color-ink: #1b1b22;
+  --color-muted: #686873;
+  --color-line: #e8e8ee;
+
+  /* Institucionales */
+  --color-blue: #4b7cb7;
+  --color-magenta: #ad3a87;
+  --color-purple: #392057;
+  --color-turquoise: #32a9c7;
+}
+
+@theme inline {
+  --color-fme-white: var(--color-white);
+  --color-fme-offwhite: var(--color-offwhite);
+  --color-fme-ink: var(--color-ink);
+  --color-fme-muted: var(--color-muted);
+  --color-fme-line: var(--color-line);
+
+  --color-fme-blue: var(--color-blue);
+  --color-fme-magenta: var(--color-magenta);
+  --color-fme-purple: var(--color-purple);
+  --color-fme-turquoise: var(--color-turquoise);
+
+  --font-sans: var(--font-manrope);
+  --font-accent: var(--font-caveat);
+
+  --container-fme: 1280px;
+}
+
+* {
+  border-color: var(--color-fme-line);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+}
+
+body {
+  background: var(--color-fme-white);
+  color: var(--color-fme-ink);
+}
+
+::selection {
+  background: var(--color-fme-magenta);
+  color: var(--color-fme-white);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-fme-blue);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
