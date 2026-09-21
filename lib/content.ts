@@ -279,7 +279,7 @@ export const contact = {
   description: "¿Quieres conocer más sobre nuestra fundación?",
   info: {
     ubicacion: "Boulevard El Minero km 3.5, Pachuca, Hidalgo, C.P. 42032",
-    telefono: "771 161 9907",
+    telefono: null as string | null,
     email: "mariaelenamorenofundacion@gmail.com",
     whatsapp: null as string | null,
     facebook: "https://www.facebook.com/profile.php?id=100081247000296&locale=es_LA",
@@ -305,7 +305,6 @@ export const press = {
     "¿Eres periodista o representas un medio de comunicación? Contáctanos para entrevistas, información institucional o material gráfico.",
   contactLabel: "Contacto de prensa",
   email: contact.info.email,
-  telefono: contact.info.telefono,
 };
 
 const mapQuery = encodeURIComponent(`${contact.info.ubicacion}, México`);

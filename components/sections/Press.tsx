@@ -1,4 +1,4 @@
-import { Mail, Newspaper, Phone } from "lucide-react";
+import { Mail, Newspaper } from "lucide-react";
 import { press } from "@/lib/content";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -24,13 +24,6 @@ export function Press() {
             >
               <Mail className="h-4 w-4 shrink-0 text-fme-muted" />
               {press.email}
-            </a>
-            <a
-              href={`tel:+52${press.telefono.replace(/\s+/g, "")}`}
-              className="flex items-center gap-3 text-[15px] text-fme-ink transition-colors hover:text-fme-blue"
-            >
-              <Phone className="h-4 w-4 shrink-0 text-fme-muted" />
-              {press.telefono}
             </a>
           </div>
         </div>

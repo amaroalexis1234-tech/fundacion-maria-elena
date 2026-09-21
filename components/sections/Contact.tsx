@@ -1,7 +1,7 @@
 "use client";
 
 import { useId, useState, type FormEvent } from "react";
-import { Mail, Phone } from "lucide-react";
+import { Mail } from "lucide-react";
 import { contact } from "@/lib/content";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -15,12 +15,6 @@ type FieldErrors = Partial<Record<"name" | "email" | "message", string>>;
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 const infoRows = [
-  {
-    icon: Phone,
-    label: "Teléfono",
-    value: contact.info.telefono,
-    href: `tel:+52${contact.info.telefono.replace(/\s+/g, "")}`,
-  },
   { icon: Mail, label: "Correo", value: contact.info.email, href: `mailto:${contact.info.email}` },
   { icon: FacebookIcon, label: "Facebook", value: "Fundación María Elena Moreno", href: contact.info.facebook },
 ];

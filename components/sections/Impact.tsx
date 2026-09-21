@@ -20,14 +20,14 @@ export function Impact() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.5, delay: index * 0.08, ease: [0.16, 1, 0.3, 1] }}
-              className="text-center"
+              className="min-w-0 text-center"
             >
               {stat.value !== null ? (
                 <p className="text-[clamp(2.25rem,3.5vw+1rem,3.5rem)] font-extrabold tracking-tight text-fme-purple">
                   <AnimatedCounter value={stat.value} suffix={stat.suffix} />
                 </p>
               ) : (
-                <p className="font-mono text-lg font-semibold tracking-tight text-fme-purple/40 sm:text-xl">
+                <p className="break-words font-mono text-xs font-semibold tracking-tight text-fme-purple/40 sm:text-lg">
                   {stat.placeholder}
                 </p>
               )}
